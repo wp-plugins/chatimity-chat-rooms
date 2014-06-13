@@ -3,7 +3,7 @@
  * Plugin Name: Chatimity Chat Rooms
  * Plugin URI: http://chatimity.com/wp/chatimity-widget.zip
  * Description: Widget for visitors to chat using chatimity on a particular topic.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Chatimity Software Pvt Ltd
  * Author URI: http://chatimity.com
  *
