@@ -43,16 +43,13 @@ class Chatimity_Widget extends WP_Widget {
         echo $before_widget;
 
         printf( '<script type="text/javascript">' );
-        printf( '    (function() {' );
-        printf( '        var e = document.createElement("script"); e.type = "text/javascript"; e.async = true;' );
-        printf( '        e.src = "https://secure.chatimity.com/chat.js";' );
-        printf( '        var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(e, s);' );
-        printf( '    }());' );
+        printf( '   var chatimity_url = "https://secure.chatimity.com/widget?ct=6&cv=2&title=%s&topics=%s";', urlencode($title), $topics );
+        printf( '   (function() {' );
+        printf( '   var e = document.createElement("script"); e.type = "text/javascript"; e.async = true;' );
+        printf( '   e.src = "https://secure.chatimity.com/chat.js";' );
+        printf( '   var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(e, s);' );
+        printf( '   }());' );
         printf( '</script>' );
-        printf( '<div id="chatimity_widget" style="position:fixed;z-index:99;bottom:0;right:20px;">' );
-        printf( '    <iframe id="chatimity-ifr" src="https://secure.chatimity.com/widget?ct=6&cv=2&title=%s&topics=%s" width="250px" height="400px" scrolling="no" frameborder="0"></iframe>', urlencode($title), $topics );
-        printf( '</div>' );
-        printf( '<div id="chatimity_widget" style="position:fixed;bottom:0;right:20;">' );
 
         echo $after_widget;
 
