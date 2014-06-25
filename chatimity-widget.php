@@ -3,7 +3,7 @@
  * Plugin Name: Chatimity Chat Rooms
  * Plugin URI: http://chatimity.com/wp/chatimity-widget.zip
  * Description: Widget for visitors to chat using chatimity on a particular topic.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Chatimity Software Pvt Ltd
  * Author URI: http://chatimity.com
  *
@@ -43,7 +43,7 @@ class Chatimity_Widget extends WP_Widget {
         echo $before_widget;
 
         printf( '<script type="text/javascript">' );
-        printf( '   var chatimity_url = "https://secure.chatimity.com/widget?ct=6&cv=2&title=%s&topics=%s";', urlencode($title), $topics );
+        printf( '   var chatimity_url = "https://secure.chatimity.com/widget?ct=6&cv=2&title=%s&topics=%s";', urlencode($title), urlencode(str_replace(",", " ", $topics)) );
         printf( '   (function() {' );
         printf( '   var e = document.createElement("script"); e.type = "text/javascript"; e.async = true;' );
         printf( '   e.src = "https://secure.chatimity.com/chat.js";' );
