@@ -6,7 +6,7 @@ website chat, wordpress chat, wordpress live chat, wordpress live chat plugin,
 Chatimity
 Requires at least: 3.1
 Tested up to: 3.9.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 
 == Changelog ==
+= 1.0.3 =
+* Updated default topic name.
+
 = 1.0.2 =
 * Update: Fix for topic name with comma.
 
