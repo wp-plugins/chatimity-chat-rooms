@@ -69,7 +69,7 @@ class Chatimity_Widget extends WP_Widget {
     function form( $instance ) {
 
         /* Set up some default widget settings. */
-        $defaults = array( 'title' => __('Fifa Chat', 'chatimity'), 'topics' => __('FIFA', 'chatimity') );
+        $defaults = array( 'title' => __('Music Chat', 'chatimity'), 'topics' => __('Music', 'chatimity') );
         $instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
         <!-- Widget Title -->
