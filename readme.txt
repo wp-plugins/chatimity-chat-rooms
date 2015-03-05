@@ -43,9 +43,10 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 == Screenshots ==
 
-1. Chat window on your website - active chat
-2. Account Configuration
-3. User signup
+1. Account Configuration
+2. Chat window on your website - active chat
+3. Temporary user signup
+4. User signup
 
 == Frequently Asked Questions ==
 
