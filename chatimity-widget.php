@@ -3,7 +3,7 @@
  * Plugin Name: Chatimity Chat Rooms
  * Plugin URI: http://chatimity.com/wp/chatimity-widget.zip
  * Description: Widget for visitors to chat using chatimity on a particular topic.
- * Version: 1.0.2
+ * Version: 1.1
  * Author: Chatimity Software Pvt Ltd
  * Author URI: http://chatimity.com
  *
@@ -37,39 +37,39 @@ class Chatimity_Widget extends WP_Widget {
     function widget( $args, $instance ) {
         extract( $args );
 
-        $topics = $instance['topics'];
         $title = $instance['title'];
+        $width = $instance['width'];
+        $height = $instance['height'];
+
+        $canonical_name = preg_replace("/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/?])+/", "", $title);
+        $trimmed_nospace = trim(preg_replace("/\s+/", " ", $canonical_name));
+        $formatted = strtolower(preg_replace("/ /", "-", $trimmed_nospace));
 
         echo $before_widget;
 
-        printf( '<script type="text/javascript">' );
-        printf( '   var chatimity_url = "https://secure.chatimity.com/widget?ct=6&cv=2&title=%s&topics=%s";', urlencode($title), urlencode(str_replace(",", " ", $topics)) );
-        printf( '   (function() {' );
-        printf( '   var e = document.createElement("script"); e.type = "text/javascript"; e.async = true;' );
-        printf( '   e.src = "https://secure.chatimity.com/chat.js";' );
-        printf( '   var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(e, s);' );
-        printf( '   }());' );
-        printf( '</script>' );
+        printf( '<iframe src="http://%s.chatimity.com" width="%dpx" height="%dpx" frameborder="0"></iframe>', $formatted, intval($width), intval($height) );
 
         echo $after_widget;
 
     }
 
-	/**
-	 * Update the widget settings.
-	 */
+  /**
+   * Update the widget settings.
+   */
     function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
 
         $instance['title'] = strip_tags( $new_instance['title'] );
-        $instance['topics'] = strip_tags( $new_instance['topics'] );
+        $instance['width'] = strip_tags( $new_instance['width'] );
+        $instance['height'] = strip_tags( $new_instance['height'] );
+
         return $instance;
     }
 
     function form( $instance ) {
 
         /* Set up some default widget settings. */
-        $defaults = array( 'title' => __('Music Chat', 'chatimity'), 'topics' => __('Music', 'chatimity') );
+        $defaults = array( 'title' => __('Trivia', 'chatimity'), 'topics' => __('Trivia', 'chatimity'), 'height' => '400', 'width' => '250' );
         $instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
         <!-- Widget Title -->
@@ -78,12 +78,17 @@ class Chatimity_Widget extends WP_Widget {
             <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
         </p>
 
-        <!-- Widget Topic -->
+        <!-- Widget Height -->
         <p>
-            <label for="<?php echo $this->get_field_id( 'topics' ); ?>"><?php _e('Topics:', 'chatimity'); ?></label>
-            <input id="<?php echo $this->get_field_id( 'topics' ); ?>" name="<?php echo $this->get_field_name( 'topics' ); ?>" value="<?php echo $instance['topics']; ?>" style="width:100%;" />
+            <label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e('Height (px):', 'chatimity'); ?></label>
+            <input onkeyup="if(this.value.match(/[^0-9]/g)){this.value=this.value.replace(/[^0-9]/g,'');}" id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" value="<?php echo $instance['height']; ?>" style="width:100%;" />
         </p>
 
+        <!-- Widget Width -->
+        <p>
+            <label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e('Width (px):', 'chatimity'); ?></label>
+            <input onkeyup="if(this.value.match(/[^0-9]/g)){this.value=this.value.replace(/[^0-9]/g,'');}" id="<?php echo $this->get_field_id( 'width' ); ?>" name="<?php echo $this->get_field_name( 'width' ); ?>" value="<?php echo $instance['width']; ?>" style="width:100%;" />
+        </p>
     <?php
     }
 }
