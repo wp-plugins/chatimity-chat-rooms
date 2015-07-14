@@ -6,7 +6,7 @@ website chat, wordpress chat, wordpress live chat, wordpress live chat plugin,
 Chatimity
 Requires at least: 3.1
 Tested up to: 3.9.1
-Stable tag: 1.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,9 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 
 == Changelog ==
+= 2.0 =
+* New UI.
+
 = 1.1 =
 * Embeddable chat rooms.
 
@@ -45,7 +48,7 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 1. Account Configuration
 2. Chat window on your website - active chat
-3. Temporary user signup
+3. Setting a name 
 4. User signup
 
 == Frequently Asked Questions ==
