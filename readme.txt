@@ -1,4 +1,4 @@
-=== Chatimity Chat Rooms ===
+=== Chatimity Site Chat ===
 Contributors: aravind
 Tags: chat, chat online, chat rooms, free chat, chat software, user engagement, IM chat,
 live chat, live chat software, live chatting, time on site, live web chat, online chat,
@@ -10,13 +10,13 @@ Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Chatimity Chat Rooms helps website owners to keep their users engaged and active on site! And it's Free!
+Chatimity Site Chat helps website owners to keep their users engaged and active on site! And it's Free!
 
 == Description ==
 
 Increasing the user engagement and time spent on your website is now just a click away by using <a href="http://www.chatimity.com/">Chatimity</a> plugin.
 
-Chatimity Chat Rooms can be embedded as a widget in your website. Visitors can instantaneously see activity in the chat room corresponding to a topic of your choice. Visitors can either chat anonymously or chat with a name of their choice after a simple email signup.
+Chatimity Site Chat can be embedded as a widget in your website. Visitors can instantaneously see activity in the chat topic of your choice. Visitors can either chat anonymously or chat with a name of their choice after a simple email signup.
 
 Adding this widget to your website would immediately make it look more dynamic and lively. Visitors can engage with the already million plus thriving community in Chatimity and increase their time spent on your site.
 
@@ -26,6 +26,9 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 
 == Changelog ==
+= 2.0.1 =
+* Name Updated.
+
 = 2.0 =
 * New UI.
 
@@ -48,7 +51,7 @@ Love to know more about the product? Please visit our <a href="http://www.chatim
 
 1. Account Configuration
 2. Chat window on your website - active chat
-3. Setting a name 
+3. Setting a name
 4. User signup
 
 == Frequently Asked Questions ==
@@ -75,4 +78,4 @@ Step-by-step Guide:
 
 * Install plugin from WordPress directory.
 * Activate the plugin through the 'Plugins' menu in WordPress.
-* Visit the Appearence->Widgets menu in Wordpress and choose the title and topic for the chat room shown.
+* Visit the Appearence->Widgets menu in Wordpress and choose the topic and dimensions fo your site chat.
