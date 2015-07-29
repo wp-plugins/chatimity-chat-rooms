@@ -3,7 +3,7 @@
  * Plugin Name: Chatimity Site Chat
  * Plugin URI: http://chatimity.com/wp/chatimity-widget.zip
  * Description: Widget for visitors to chat using chatimity on a particular topic.
- * Version: 2.0
+ * Version: 2.0.1
  * Author: Chatimity Software Pvt Ltd
  * Author URI: http://chatimity.com
  *
